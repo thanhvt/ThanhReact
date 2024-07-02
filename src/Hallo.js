@@ -8,7 +8,6 @@ class HelloWorld extends React.Component {
            count: 1
         };
         this.handleClick = this.handleClick.bind(this);
-        // this.decreaseCount = this.decreaseCount.bind(this); 
     }
 
     handleClick = () => {
