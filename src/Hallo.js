@@ -20,7 +20,7 @@ class HelloWorld extends React.Component {
       return (
          <div>
             <h1>Hello World! Cung duoc nhi {this.state.count}</h1>
-            <h2>Tesst props {this.props.hoTen}</h2>
+            <h2>OK có vẻ ổn rồi {this.props.hoTen}</h2>
             <button onClick={this.handleClick}>Increase</button>
          </div>
       );
