@@ -7,10 +7,15 @@ import Navigate from './Navigate';
 import AboutComponent from './About';
 import ContactsComponent from './Contact';
 import TestRedux from './TestRedux';
+import MyContext from './myContext';
 
 function App() {
   return (
-    <div className="App">
+    <MyContext.Provider value={{
+      "GIA_TRI_I": "Họ và tên user ThanhVT0210",
+      "THOI_GIAN": "Thứ 2 !!!"
+    }}>
+      <div className="App">
       <header className="App-header">
         <HelloWorld hoTen="Day la ho va  ????"></HelloWorld>
         {FuncCom()}
@@ -39,6 +44,8 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </MyContext.Provider>
+    
   );
 }
 
