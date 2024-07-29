@@ -13,10 +13,10 @@ function App() {
   return (
     <MyContext.Provider value={{
       "GIA_TRI_I": "Họ và tên user ThanhVT0210",
-      "THOI_GIAN": "Thứ 2 !!!"
+      "THOI_GIAN": "Thứ 3 !!!"
     }}>
       <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <HelloWorld hoTen="Day la ho va  ????"></HelloWorld>
         {FuncCom()}
         <img src={logo} className="App-logo" alt="logo" />
@@ -31,7 +31,7 @@ function App() {
         >
           Learn React. OK Thanh đã bắt đầu học React. Move sang man hinh tiep theo
         </a>
-      </header>
+      </header> */}
       <BrowserRouter>
       <Routes>
           <Route path="/" element={<Navigate />}>
