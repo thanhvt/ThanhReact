@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from "react";
 import MyContext from "./myContext";
+import axios from "axios";
 
 export default function AboutComponent() {
   const [data, setData] = useState({});
   const [user, setUser] = useState("thanh");
+
+  const AppContext = React.createContext({ foo: 'bar', "label": 'thanhvt0210' })
+  // const GetContext = useContext(AppContext);
+
+  const getData = async () => {
+   
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
+    setData(response.data);
+    console.log("data", response.data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   let check = (THOI_GIAN) => {
     console.log("user", user);
